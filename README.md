@@ -32,6 +32,8 @@
 <kbd>
 ![Diagram](CreateNewArrayWithLess3Chars.jpg)
 </kbd>
+
+
 *Оформление по мере работы*
 
 * Добавление задачи проекта в README
