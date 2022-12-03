@@ -27,7 +27,7 @@
 2. Написать программу на языке C#
 3. Оформить блок схему для основного метода решения задачи
 <kbd>
-[Diagramm](https://i.yapx.ru/VDCIu.jpg "Блок-схема")
+[Diagramm](https://i.yapx.ru/VDWFI.jpg "Блок-схема")
 </kbd>
 <kbd>
 ![Diagram](CreateNewArrayWithLess3Chars.jpg)

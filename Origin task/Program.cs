@@ -33,8 +33,7 @@ string[] CreateNewArrayWithLess3Chars(string[] array)  // Основной ме�
     string[] newArray = new string[array.Length];
     for (int i = 0; i < array.Length; i++)
     {
-        char[] splitToChars = array[i].ToCharArray();
-        if(splitToChars.Length <= 3)
+       if(array[i].Length <= 3) 
         {
             newArray[howManyCounter]= array[i];
             howManyCounter++;
@@ -45,15 +44,26 @@ string[] CreateNewArrayWithLess3Chars(string[] array)  // Основной ме�
     return newArray;
 }
 
+void RunProgram()
+{
+    int n = Convert.ToInt32(Console.ReadLine());    
+    Console.WriteLine();
+    string[] myArray = new string[n];
+    GenerateArrayFromKeyboard(myArray);
+    Console.Write("\nYour input array: ");
+    ArrayOutput(myArray);
+    Console.Write("Array, after program runing: ");
+    ArrayOutput(CreateNewArrayWithLess3Chars(myArray));
+}
+
 Console.WriteLine("Hello Inspector! This program generates a new array of strings whose length is less than or equal to 3");
 Console.Write("Input how many elements of strings being in array: ");
-int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
-if(n<0)
-    n*=(-1);
-string[] myArray = new string[n];
-GenerateArrayFromKeyboard(myArray);
-Console.Write("\nYour input array: ");
-ArrayOutput(myArray);
-Console.Write("Array, after program runing: ");
-ArrayOutput(CreateNewArrayWithLess3Chars(myArray));
+try
+{
+    RunProgram();
+}
+catch
+{
+    Console.Write("The number of elements in the array can only be a positive number, please Enter positive number: ");
+    RunProgram();
+}
